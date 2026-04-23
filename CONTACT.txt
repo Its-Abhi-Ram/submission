@@ -1,0 +1,5 @@
+Full Name: [Your Full Name]
+Email: [your.email@example.com]
+Phone: [Your Phone Number]
+GitHub Profile: [https://github.com/yourusername]
+One sentence on the most challenging part: Implementing role-based access control with JWT tokens was the most challenging part as it required careful handling of different token types and scopes.
