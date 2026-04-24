@@ -6,7 +6,7 @@ This is a Django REST API for managing attendance in the SkillBridge program. It
 http://localhost:8000/api/ (for local development)
 
 ## Live Render Server URL:
-Render Web server link : https://submission-5ujh.onrender.com
+Render Web server link : https://skillbridge-rgzi.onrender.com
 
 ## Local Setup Instructions
 
