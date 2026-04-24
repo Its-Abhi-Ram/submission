@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: skillbridge
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt && python manage.py collectstatic --no-input && python manage.py migrate"
+    startCommand: "gunicorn skillbridge.wsgi:application"
+    envVars:
+      - key: DEBUG
+        value: "False"
+      - key: SECRET_KEY
+        sync: false
+      - key: PYTHON_VERSION
+        value: "3.11"
+databases:
+  - name: skillbridge
+    plan: free
+    databaseName: skillbridge
+    user: skillbridge
