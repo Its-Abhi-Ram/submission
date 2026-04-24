@@ -26,9 +26,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config('SECRET_KEY', default='django-insecure--60!&1-2x(j9(f%-60pk-b1#$bd1zs_+92=@l0g!$#h+44&lfd')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', default=False, cast=bool)
+DEBUG = config('DEBUG', default=True, cast=bool)
 
-ALLOWED_HOSTS = ['*'] if DEBUG else config('ALLOWED_HOSTS', cast=Csv())
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='*,localhost,127.0.0.1', cast=Csv())
 
 
 # Application definition
@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'skillbridge.wsgi.application'
 if config('USE_POSTGRES', default=False, cast=bool):
     DATABASES = {
         'default': dj_database_url.config(
-            default=config('DATABASE_URL'),
+            default=config('DATABASE_URL', default='sqlite:///db.sqlite3'),
             conn_max_age=600,
             conn_health_checks=True,
         )
