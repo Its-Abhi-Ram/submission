@@ -1,9 +1,12 @@
 # SkillBridge Attendance Management API
-
+Change framework layers like Django and MySql
 This is a Django REST API for managing attendance in the SkillBridge program. It implements role-based access control with JWT authentication.
 
 ## Live API Base URL
 http://localhost:8000/api/ (for local development)
+
+## Live Render Server URL:
+Render Web server link : https://submission-5ujh.onrender.com
 
 ## Local Setup Instructions
 
@@ -161,12 +164,6 @@ curl -X GET http://localhost:8000/api/monitoring/attendance/ \
 
 - Some edge cases in permission checks may need refinement.
 - Deployment to production not implemented (only local).
+- Full deployment to Render.
 
-## What Was Skipped
 
-- Full deployment to Railway/Render (local only).
-- Advanced security features like token revocation.
-
-## One Thing I'd Do Differently With More Time
-
-With more time, I would implement a more robust permission system using Django's permission framework and add comprehensive logging for audit trails.
